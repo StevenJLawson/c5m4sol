@@ -29,7 +29,7 @@ function MenuDataService($http,$q) {
         }
       }).then(function (result) {
         console.log(result);
-        return result.data;
+        return result.data.menu_items;
       });
       return promise;
   };

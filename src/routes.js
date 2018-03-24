@@ -37,7 +37,7 @@ angular.module('MenuApp')
       templateUrl: 'src/templates/items.template.html',
       controller: 'ItemsController as itemsCtrl',
       resolve: {
-        item: ['$stateParams', 'MenuDataService',
+        items: ['$stateParams', 'MenuDataService',
               function ($stateParams, MenuDataService) {
                 return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
               }]
